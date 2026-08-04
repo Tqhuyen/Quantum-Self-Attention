@@ -1,8 +1,8 @@
 # Efficient Circuit Classifier Design for Enhancing Quantum Self-Attention in Vision Transformers
 
 This repository contains the code for a fully quantum self-attention model that combines the
-[Quantum Self-Attention Network (QSAN)](https://ieeexplore.ieee.org/document/10803114/) with a
-**strongly entangling-layers circuit classifier**, as described in the accompanying paper
+Quantum Self-Attention Network (QSAN) with a **strongly entangling-layers circuit classifier**, as
+described in the accompanying paper
 [Efficient Circuit Classifier Design for Enhancing Quantum Self-Attention in Vision Transformers](https://ieeexplore.ieee.org/document/11591004/authors#authors).
 
 Quantum self-attention is a promising replacement for classical self-attention, which typically

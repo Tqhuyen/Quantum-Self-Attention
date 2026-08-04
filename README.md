@@ -70,6 +70,14 @@ The pipeline (Algorithm 1 in the paper) is:
    (introduced by Schuld et al., implemented in PennyLane/Qiskit), which act as the classifier.
 7. **Measurement** — the expectation value `⟨Z₀⟩` is used to give the prediction.
 
+![Proposed model: QSAN serves as a feature extractor, followed by strong entangling layers for enhanced classification.](figures/proposed_model.png)
+
+*Figure 1: The proposed model — QSAN feature extractor followed by a strongly entangling-layers circuit classifier.*
+
+![Strong entangling layers with 2 layers and 8 qubits, controlled by r=1 and r=2.](figures/strong_entangling_layers.png)
+
+*Figure 2: Strong entangling layers ansatz used as the quantum classifier.*
+
 ### Quantum resource requirements
 
 Given a data dimension `D`, each register requires `N_register = log₂D` qubits (amplitude encoding).
@@ -168,6 +176,18 @@ Our model achieves at least **10% higher training accuracy** than all baselines 
 QNLP (MC) benchmarks under identical settings. Test accuracy differences are limited by the small
 evaluation sets; the MC result (56%) is the highest among all compared models.
 
+![Training cost comparison of our method against the baselines on the MC dataset.](figures/results_cost.png)
+
+*Figure 3: Training cost curves — our method converges to a lower loss than the baselines.*
+
+![Training accuracy comparison of our method against the baselines on the MC dataset.](figures/results_train_acc.png)
+
+*Figure 4: Training accuracy curves — our method reaches 100% training accuracy.*
+
+![Testing accuracy comparison of our method against the baselines on the MC dataset.](figures/results_test_acc.png)
+
+*Figure 5: Testing accuracy curves — our method achieves the highest test accuracy (56%).*
+
 ## Repository Structure
 
 ```
@@ -185,6 +205,12 @@ evaluation sets; the MC result (56%) is the highest among all compared models.
     ├── adagrad_optimizer.ipynb
     ├── gradient_descent_optimizer.ipynb
     └── momentum_optimizer.ipynb
+└── figures/                          # Figures used in this README
+    ├── proposed_model.png
+    ├── strong_entangling_layers.png
+    ├── results_cost.png
+    ├── results_train_acc.png
+    └── results_test_acc.png
 ```
 
 > Nesterov Momentum results are produced by `our_method_with_15_layers.ipynb`

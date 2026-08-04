@@ -1,0 +1,26 @@
+# Jupyter notebooks
+.ipynb_checkpoints/
+
+# Paper / documents
+*.pdf
+*.docx
+*.doc
+*.tex
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+*.egg-info/
+
+# Kaggle / env
+.kaggle/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDEs
+.vscode/
+.idea/

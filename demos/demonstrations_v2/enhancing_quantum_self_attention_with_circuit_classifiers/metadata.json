@@ -2,24 +2,19 @@
   "title": "Enhancing quantum self-attention with strongly entangling circuit classifiers",
   "authors": [
     {
-      "name": "Quang-Huyen Tran",
-      "username": "qtran"
+      "name": "Quang-Huyen Tran"
     },
     {
-      "name": "Yu-Han Lin",
-      "username": "yhanlin"
+      "name": "Yu-Han Lin"
     },
     {
-      "name": "Hanh T. M. Tran",
-      "username": "htran"
+      "name": "Hanh T. M. Tran"
     },
     {
-      "name": "Duy-Tuan Dao",
-      "username": "dtuandao"
+      "name": "Duy-Tuan Dao"
     },
     {
-      "name": "Van-Linh Nguyen",
-      "username": "vnguyen"
+      "name": "Van-Linh Nguyen"
     }
   ],
   "executable_stable": true,

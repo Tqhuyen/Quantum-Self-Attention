@@ -8,7 +8,8 @@ then adapt its data, depth, and training setup using the practical recipes at th
 Quantum self-attention explores quantum-circuit alternatives to the classical self-attention
 mechanism at the heart of modern deep-learning models. Several architectures were proposed recently,
 including the quantum self-attention network (QSAN) [#QSAN]_, the quantum kernel self-attention
-network (QKSAN) [#QKSAN]_ and the quantum self-attention neural network (QSANN) [#QSANN]_. Here we
+network (QKSAN) [#QKSAN]_, the quantum self-attention neural network (QSANN) [#QSANN]_ and related
+circuit designs [#QSANM]_. Here we
 explore a trainable circuit readout for classification rather than a fixed measurement alone.
 
 In this demo we adapt the approach of our paper **"Efficient Circuit Classifier Design for
@@ -536,9 +537,9 @@ print(f"Final test accuracy:  {final_test_acc:0.3f}")
 # classical classifier before claiming an improvement. Report held-out performance, variability,
 # parameter counts, and measured runtime; this tutorial alone does not establish quantum advantage.
 #
-###############################################################################
+#
 # Conclusion
-# ~~~~~~~~~~
+# ----------
 #
 # We have implemented a circuit inspired by quantum self-attention followed by a strongly
 # entangling classifier, and trained it using classical optimization. The printed metrics describe
@@ -555,7 +556,7 @@ print(f"Final test accuracy:  {final_test_acc:0.3f}")
 #
 #
 # References
-# ~~~~~~~~~~
+# ----------
 #
 # .. [#Tran]
 #

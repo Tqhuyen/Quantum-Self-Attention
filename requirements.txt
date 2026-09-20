@@ -1,0 +1,13 @@
+# Dependencies for the notebooks in this repository (CPU-only, e.g. Kaggle).
+# Verified with PennyLane 0.45.1 on Python 3.10-3.12.
+#
+# Core simulation and training stack
+pennylane==0.45.1
+numpy>=1.26
+matplotlib>=3.8
+tensorflow>=2.15,<2.20   # used for MC (QNLP) word embeddings
+
+# Required by qml.data.load("other", name="downscaled-mnist")
+h5py>=3.11
+fsspec>=2024.2
+aiohttp>=3.9

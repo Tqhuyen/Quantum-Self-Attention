@@ -1,6 +1,7 @@
 # Enhancing Quantum Self-Attention — PR #1861 Work Log
 
 **PR:** https://github.com/PennyLaneAI/demos/pull/1861 (base `master`, head `enhancing-quantum-self-attention` in fork `Tqhuyen/demos`)
+**Community Demo issue:** https://github.com/PennyLaneAI/demos/issues/1862 (submitted 2026-09-20, label `demos`)
 **Status:** Marked ready for review (2026-09-20). CI re-running for latest revision (`886ae4a`).
 **Latest pushed commit:** `886ae4a` — "Use registered pennylane.ai username for first author"
 

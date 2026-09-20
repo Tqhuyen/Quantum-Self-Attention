@@ -1,8 +1,8 @@
 # Enhancing Quantum Self-Attention — PR #1861 Work Log
 
 **PR:** https://github.com/PennyLaneAI/demos/pull/1861 (base `master`, head `enhancing-quantum-self-attention` in fork `Tqhuyen/demos`)
-**Status:** All CI checks green on previous revision; new revision pushed and re-running (2026-09-20).
-**Latest pushed commit:** `5777972` — "Fix RST section rendering and cite QSANM reference; update modification date"
+**Status:** Marked ready for review (2026-09-20). CI re-running for latest revision (`886ae4a`).
+**Latest pushed commit:** `886ae4a` — "Use registered pennylane.ai username for first author"
 
 ## Root Cause Found and Fixed (RST section errors)
 
@@ -31,12 +31,11 @@ The docutils `CRITICAL/ERROR: Unexpected section title` messages came from a rea
 
 ### Metadata (`metadata.json`)
 - `dateOfLastModification` → `2026-09-20T12:00:00+00:00` (per the GitHub Actions reminder bot).
-- **Important:** authors were tried as `name` + `username`, but that is **invalid** under
-  `author.schema.0.2.0.json` (`oneOf` with `additionalProperties: false`). Reverted to
-  schema-valid `name`-only entries. Validated locally with a ref-resolving
-  `Draft202012Validator` (0 errors); `name`+`username` combo proven invalid.
-- Real pennylane.ai usernames for the five authors are still needed to satisfy
-  CONTRIBUTING.md — only the authors can provide them.
+- **Authors:** first author now uses the registered pennylane.ai username `Tqhuyen`
+  (verified at https://pennylane.ai/profile/Tqhuyen); the four co-authors remain schema-valid
+  `name`-only entries. **Important:** `name` + `username` together is **invalid** under
+  `author.schema.0.2.0.json` (`oneOf` with `additionalProperties: false`); validated locally
+  with a ref-resolving `Draft202012Validator` (0 errors).
 
 ### Demo content (`demo.py`)
 - Cited `[#QSANM]` in the intro (was defined but never referenced → footnote warning).
@@ -58,8 +57,8 @@ The docutils `CRITICAL/ERROR: Unexpected section title` messages came from a rea
 - `rebuild_all.sh` updated to use `python -m pip` (bare `pip` not on PATH).
 
 ## Remaining Before Merge (review-coordinated)
-1. Confirm registered pennylane.ai usernames for all authors (schema: `username` **or**
-   `name` per author, never both).
+1. Optional: pennylane.ai usernames for the four co-authors (first author `Tqhuyen` is set;
+   schema: `username` **or** `name` per author, never both).
 2. Replace the placeholder thumbnail with final regular/large thumbnails
    (`_static/demo_thumbnails/{regular,large}_demo_thumbnails/...`).
 3. Maintainer review and any requested changes.
